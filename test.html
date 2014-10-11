@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <style>
+            body {
+              background: #bbb;
+
+              /* you can also have this set on a parent element */
+              font-family: Arial, sans-serif;
+            }
+
+            #menu {
+              background: rgba(0,0,0,.5);
+              display: block;
+              font-size: 36px; /* change this */
+              padding: 2.5em 2em;
+              width: 2em;
+              height: auto;
+            }
+
+            #menu span {
+              background: #fff;
+              display: block;
+              position: relative;
+              -webkit-transform: translate3d(0,0,0);
+            }
+
+            #menu span,
+            #menu span:before,
+            #menu span:after {
+              width: 100%;
+              height: .2em;
+              -moz-transition:       all 0.4s;
+              -o-transition:         all 0.4s;
+              -webkit-transition:    all 0.4s;
+              transition:            all 0.4s;
+              -webkit-transform: translate3d(0,0,0);
+            }
+
+            #menu span:before,
+            #menu span:after {
+              background: #fff;
+              content: " ";
+              margin-top: -.6em;
+              position: absolute;
+            }
+
+            #menu span:after {
+              margin-top: .6em;
+            }
+
+
+            #button{display:none}
+            .ani
+                {
+                width:100px;
+                height:100px;
+                background:red;
+                transition:width 2s;
+                -moz-transition:width 2s; /* Firefox 4 */
+                -webkit-transition:width 2s; /* Safari and Chrome */
+                -o-transition:width 2s; /* Opera */
+                display:block;
+                }
+
+
+            #button:checked ~ #menu span{background: transparent;}
+
+            #button:checked ~ #menu span:before {
+              -moz-transform: rotate(45deg) translate(.5em, .4em);
+              -ms-transform: rotate(45deg) translate(.5em, .4em);
+              -o-transform: rotate(45deg) translate(.5em, .4em);
+              -webkit-transform: rotate(45deg) translate(.5em, .4em);
+              transform: rotate(45deg) translate(.5em, .4em);
+            }
+
+            #button:checked ~ #menu span:after {
+              -moz-transform: rotate(-45deg) translate(.45em, -.35em);
+              -ms-transform: rotate(-45deg) translate(.45em, -.35em);
+              -o-transform: rotate(-45deg) translate(.45em, -.35em);
+              -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
+              transform: rotate(-45deg) translate(.45em, -.35em);
+            }
+
+            #button:checked ~ .ani{width:300px;}
+
+
+        </style>
+
+
+        <input type="checkbox" id="button">
+        <label id="menu" for="button"><span></span></label>
+        <div class="ani"></div>
+
+    </body>
+</html>

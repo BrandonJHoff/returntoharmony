@@ -1,4 +1,27 @@
+.nav {
+    position: fixed;
+    text-align: center;
+    background: #000;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    color: white;
+    overflow: hidden;
+}
 
+#mini_menu_input {
+    display: none;
+}
+
+/*.nav a {
+    width: 10%;
+    height: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    margin-left: 10%;
+}*/
 
 header {
     background: url('../img/lotus.jpg') no-repeat fixed;
@@ -7,4 +30,60 @@ header {
     background-position: 50% 0;
     height: 30em;
     color: white;
+}
+
+/*section {
+    height: 30em;
+}*/
+
+#about {
+    background-color: #f00;
+}
+
+#kametz {
+    background-color: #ff0;
+}
+
+#about p, #kametz p{
+    margin-left: 20%;
+    width: 60%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+#aroma {
+    background: url('../img/massage.jpg') no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    background-position: 50% 0;
+    height: 30em;
+    color: white;
+}
+
+#therapists {
+    background-color: #0f0;
+}
+
+.therapist {
+    width: 25%;
+}
+
+.item1, .item2, .item3 {
+    width: 33%;
+    text-align: center;
+}
+
+
+.circle {
+  margin: 25px 100px;
+  width: 200px;
+  color: #fff;
+  font-size: 32px;
+  line-height: 200px;
+  text-align: center;
+  height: 200px;
+  border-radius: 100px;
+}
+.bg-green {
+  background: #5bd5a0;
 }
